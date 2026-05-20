@@ -1,15 +1,70 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <title>CSS Pseudo Classes</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Root pseudo-class */
+        :root {
+            background-color: rgb(135, 206, 235);
+        }
+
+        /* Paragraph styling */
+        article p:first-child {
+            background-color: black;
+            color: white;
+        }
+
+        article p:nth-child(2) {
+            color: black;
+        }
+
+        article p:last-child {
+            color: red;
+        }
+
+        /* List styling */
+        ul li {
+            width: 50%;
+            padding: 10px;
+            background-color: gray;
+        }
+
+        /* Odd items */
+        ul li:nth-child(odd) {
+            background-color: white;
+        }
+
+        /* First and last items */
+        ul li:first-child,
+        ul li:last-child {
+            font-size: 22px;
+        }
+
+        /* Third-to-last item */
+        ul li:nth-last-child(3) {
+            background-color: pink;
+        }
+    </style>
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+    <article>
+        <p>First paragraph with white text on black background.</p>
+        <p>Second paragraph with normal text color.</p>
+        <p>Third paragraph with red text color.</p>
+    </article>
+
+    <ul>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+        <li>List Item 5</li>
+    </ul>
 
 </body>
 
